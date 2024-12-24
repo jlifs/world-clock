@@ -1,28 +1,54 @@
 function updateTime() {
-// Los Angeles
-let losAngelesElement = document.querySelector("#los-angeles");
-if (losAngelesElement) {
-let losAngelesDateElement = losAngelesElement.querySelector(".date");
-let losAngelesTimeElement = losAngelesElement.querySelector(".time");
-let losAngelesTime = moment().tz("America/Los_Angeles");
+  // Los Angeles
+  let losAngelesElement = document.querySelector("#los-angeles");
+  if (losAngelesElement) {
+    let losAngelesDateElement = losAngelesElement.querySelector(".date");
+    let losAngelesTimeElement = losAngelesElement.querySelector(".time");
+    let losAngelesTime = moment().tz("America/Los_Angeles");
 
+    losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM Do YYYY");
+    losAngelesTimeElement.innerHTML = losAngelesTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+  // Honolulu
+  let honoluluElement = document.querySelector("#honolulu");
+  if (honoluluElement) {
+    let honoluluDateElement = honoluluElement.querySelector(".date");
+    let honoluluTimeElement = honoluluElement.querySelector(".time");
+    let honoluluTime = moment().tz("Pacific/Honolulu");
 
-losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM Do YYYY");
-losAngelesTimeElement.innerHTML = losAngelesTime.format(
-    "h:mm:ss [<small>]A[</small>]"
-);
-}
-    // Paris
-let parisElement = document.querySelector("#paris");
-if (parisElement) {
-let parisDateElement = parisElement.querySelector(".date");
-let parisTimeElement = parisElement.querySelector(".time");
-let parisTime = moment().tz("Europe/Paris");
+    honoluluDateElement.innerHTML = honoluluTime.format("MMMM Do YYYY");
+    honoluluTimeElement.innerHTML = honoluluTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
 
+  // Sydney
+  let sydneyElement = document.querySelector("#sydney");
+  if (sydneyElement) {
+    let sydneyDateElement = sydneyElement.querySelector(".date");
+    let sydneyTimeElement = sydneyElement.querySelector(".time");
+    let sydneyTime = moment().tz("Australia/Sydney");
 
-parisDateElement.innerHTML = parisTime.format("MMMM Do YYYY");
-parisTimeElement.innerHTML = parisTime.format("h:mm:ss [<small>]A[</small>]");
-}
+    sydneyDateElement.innerHTML = sydneyTime.format("MMMM Do YYYY");
+    sydneyTimeElement.innerHTML = sydneyTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+
+  // Yukon
+  let yukonElement = document.querySelector("#yukon");
+  if (yukonElement) {
+    let yukonDateElement = yukonElement.querySelector(".date");
+    let yukonTimeElement = yukonElement.querySelector(".time");
+    let yukonTime = moment().tz("Canada/Yukon");
+
+    yukonDateElement.innerHTML = yukonTime.format("MMMM Do YYYY");
+    yukonTimeElement.innerHTML = yukonTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
 }
 
 function updateCity(event) {

@@ -1,6 +1,10 @@
 body {
-    background-color: #f9f7fe;
+    background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/153/376/original/world.jpg?1734984460");
+    background-size: cover;
+    background-position: center top;  
+    color: #ffffff;
     font-family: sans-serif;
+    text-shadow: 5px 2px 10px #000;
 }
 
 h1 {
@@ -25,9 +29,10 @@ select {
 .container {
     max-width: 600px;
     margin: 60px auto;
-    background-color: white;
+    background-color: rgb(80, 91, 114);
+    opacity: 90%;
     padding: 30px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(13, 26, 46, 0.2) 0px 7px 29px 0px;
     border-radius: 10px;
 }
 
@@ -61,5 +66,5 @@ select {
 footer {
     text-align: center;
     font-size: 18px;
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(215, 209, 209, 0.8);
 }
